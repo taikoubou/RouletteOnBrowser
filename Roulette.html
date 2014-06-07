@@ -8,30 +8,53 @@
 	</head>
 
 	<style type="text/css">
-		ul.text{
-			margin-top:40px
-		}	
-		ul.text li{
-			display:inline;
-			margin-right:40px;
-		}
-		ul.button li{
-			display:inline;
-			margin-right:40px;
+		div.table{
+			position:relative;
+			margin-left:20px;
 		}
 	</style>
 
 	<body>
-		<ul class="text" >
-		<li id="Entry1">hogehoge</li>
-		<li id="Entry2">foo</li>
-		<li id="Entry3">var</li>
-	</ul>
-	<div class="button">
-		<button id="EB1" type="button" onclick="Entry1Button()">hoge</button>
-		<button id="EB2" type="button" onclick="Entry2Button()">foo</button>
-		<button id="EB3" type="button" onclick="Entry3Button()">var</button>
-	</div>
+		<div class="table">
+			<tr>
+				<td>
+					<table border=0 cellpadding=10 cellspacing=0>
+						<tr align=center>
+							<td>
+								<p id="Entry1">hogehoge</p>
+							</td>
+							<td>
+								<p id="Entry2">foo</p>
+							</td>
+							<td>
+								<p id="Entry3">var</p>
+							</td>
+						</tr>
+						
+						<tr align=center>
+							<td>
+								<button id="EB1" type="button" onclick="Entry1Button()">STOP</button>
+							</td>
+							<td>
+								<button id="EB2" type="button" onclick="Entry2Button()">STOP</button>
+							</td>
+							<td>
+								<button id="EB3" type="button" onclick="Entry3Button()">STOP</button>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<form name="Listform">
+				<select name="LinkList" size="10" cols="10" multiple>
+					<option>hoge
+					<option>foo
+					<option>var
+				</select>
+				<button id="Delete" type="button" onclick="_delete(document.Listform.LinkList,document.Listform)">Delete</button>
+			</form>
+		</div>
+
 		<script>
 			main();
 		</script>
