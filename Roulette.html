@@ -11,6 +11,10 @@
 		div.table{
 			position:relative;
 			margin-left:20px;
+			margin-top:20px;
+		}
+		table{
+			table-layout:fixed;
 		}
 	</style>
 
@@ -18,16 +22,16 @@
 		<div class="table">
 			<tr>
 				<td>
-					<table border=0 cellpadding=10 cellspacing=0>
+					<table border=0 cellpadding=10 cellspacing=0 width="450">
 						<tr align=center>
 							<td>
-								<p id="Entry1">hogehoge</p>
+								<span id="Entry1">hogehoge</span>
 							</td>
 							<td>
-								<p id="Entry2">foo</p>
+								<span id="Entry2">foo</span>
 							</td>
 							<td>
-								<p id="Entry3">var</p>
+								<span id="Entry3">var</span>
 							</td>
 						</tr>
 						
@@ -45,18 +49,17 @@
 				</td>
 			</tr>
 
-			<form name="Listform">
-				<select name="LinkList" size="10" cols="10" multiple>
-					<option>hoge
-					<option>foo
-					<option>var
-				</select>
-				<button id="Delete" type="button" onclick="_delete(document.Listform.LinkList,document.Listform)">Delete</button>
-			</form>
+			<select id="LinkList" size="10" cols="10" multiple>
+				<option>hoge
+				<option>foo
+				<option>var
+			</select>
+			<button id="Delete" type="button" onclick="_delete()">Delete</button>
 		</div>
 
 		<script>
 			main();
 		</script>
+
 	</body>
 </html>
