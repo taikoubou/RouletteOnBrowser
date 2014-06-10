@@ -16,22 +16,25 @@
 		table{
 			table-layout:fixed;
 		}
+		select{
+			width:200px;
+		}
 	</style>
 
 	<body>
 		<div class="table">
 			<tr>
 				<td>
-					<table border=0 cellpadding=10 cellspacing=0 width="450">
+					<table border=0 cellpadding=10 cellspacing=0 width="560">
 						<tr align=center>
 							<td>
-								<span id="Entry1">hogehoge</span>
+								<span id="Entry1">Print1</span>
 							</td>
 							<td>
-								<span id="Entry2">foo</span>
+								<span id="Entry2">Print2</span>
 							</td>
 							<td>
-								<span id="Entry3">var</span>
+								<span id="Entry3">Print3</span>
 							</td>
 						</tr>
 						
@@ -44,22 +47,24 @@
 							</td>
 							<td>
 								<button id="EB3" type="button" onclick="Entry3Button()">STOP</button>
+							</td>
+							<td>
+								<button id="Start" type="button" onclick="StartRoulette()">START</button>
+							</td>
 						</tr>
 					</table>
 				</td>
 			</tr>
 
-			<select id="LinkList" size="10" cols="10" multiple>
-				<option>hoge
-				<option>foo
-				<option>var
-			</select>
+			<form name="ListForm">
+				<select name="MemList" size="10" cols="10" multiple>
+				</select>
+			</form>
 			<button id="Delete" type="button" onclick="_delete()">Delete</button>
+			<form name="addForm">
+				名前:<input type="text" name="AddName" value="" size="10" onKeyPress="return CheckKey(event)">
+				<button type="button" onclick="_add()">Add</button>
+			</form>
 		</div>
-
-		<script>
-			main();
-		</script>
-
 	</body>
 </html>
