@@ -124,7 +124,7 @@ var _add = function(){
 	var selectList = document.ListForm.MemList;
 	var AddName = document.addForm.AddName.value;
 
-	if(AddName == null)return ;
+	if(AddName == "")return ;
 
 	selectList.length++;
 	selectList.options[selectList.length-1].value = selectList.length-1;
